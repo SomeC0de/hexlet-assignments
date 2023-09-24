@@ -13,14 +13,14 @@ public class App {
             isScrabbled = false;
         } else {
             // Array to ArrayList Conversion
-            String[] inputLetters = input.split("");
+            String[] inputLetters = input.toLowerCase().split("");
             List<String> inputList = new ArrayList<>();
             for (String letter : inputLetters) {
                 inputList.add(letter);
             }
 
             // Array to ArrayList Conversion
-            String[] wordLetters = word.split("");
+            String[] wordLetters = word.toLowerCase().split("");
             List<String> wordList = new ArrayList<>();
             for (String letter : wordLetters) {
                 wordList.add(letter);
