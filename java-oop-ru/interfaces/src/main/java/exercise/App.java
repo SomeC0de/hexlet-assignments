@@ -7,9 +7,14 @@ import java.util.stream.Collectors;
 // BEGIN
 public class App {
     public static List<String> buildApartmentsList(List<Home> objectsList, int objectsToDisplay) {
-        List<String> sortedObjects = new ArrayList<String>();
-        sortedObjects = objectsList.stream().sorted((o1, o2)->o1.compareTo(o2);
-        return sortedObjects;
+        List<Home> sortedHomes = objectsList.stream().sorted(Home::compareTo).toList();
+        List<String> stringHomes = new ArrayList<String>(objectsToDisplay);
+
+        for (var idx = 0; idx < objectsToDisplay; idx++) {
+           stringHomes.add(sortedHomes.get(idx).toString());
+        }
+
+        return stringHomes;
     }
 }
 // END

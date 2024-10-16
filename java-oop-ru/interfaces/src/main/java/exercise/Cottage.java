@@ -4,20 +4,28 @@ package exercise;
 public class Cottage implements Home {
     private double area;
     private int floorCount;
+    private double balconyArea;
 
     public Cottage(double area, int floorCount) {
         this.area = area;
         this.floorCount = floorCount;
+        this.balconyArea = 0.0;
+    }
+
+    public Cottage(double area, int floorCount, double balconyArea) {
+        this.area = area;
+        this.floorCount = floorCount;
+        this.balconyArea = balconyArea;
     }
 
     @Override
     public double getArea() {
-        return this.area;
+        return (this.area + this.balconyArea);
     }
 
     @Override
     public int compareTo(Home another) {
-        return Double.compare(this.area, another.getArea());
+        return Double.compare(this.getArea(), another.getArea());
     }
 
     @Override
