@@ -4,23 +4,15 @@ package exercise;
 public class Cottage implements Home {
     private double area;
     private int floorCount;
-    private double balconyArea;
 
     public Cottage(double area, int floorCount) {
         this.area = area;
         this.floorCount = floorCount;
-        this.balconyArea = 0.0;
-    }
-
-    public Cottage(double area, int floorCount, double balconyArea) {
-        this.area = area;
-        this.floorCount = floorCount;
-        this.balconyArea = balconyArea;
     }
 
     @Override
     public double getArea() {
-        return (this.area + this.balconyArea);
+        return this.area;
     }
 
     @Override
@@ -33,6 +25,4 @@ public class Cottage implements Home {
         return String.format("%s этажный коттедж площадью %s метров", this.floorCount, this.getArea());
     }
 }
-// END
-
 // END
