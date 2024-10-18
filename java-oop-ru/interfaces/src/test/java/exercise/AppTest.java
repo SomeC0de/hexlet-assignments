@@ -11,9 +11,9 @@ class AppTest {
     @Test
     void testBuildApartmentsList1() {
         List<Home> apartments = new ArrayList<>(List.of(
-            new Cottage(41, 3, 10),
+            new Flat(41, 3, 10),
             new Cottage(125.5, 2),
-            new Cottage(80, 10, 2),
+            new Flat(80, 10, 2),
             new Cottage(150, 3)
         ));
 
@@ -31,8 +31,8 @@ class AppTest {
     void testBuildApartmentsList2() {
         List<Home> apartments = new ArrayList<>(List.of(
             new Cottage(100, 1),
-            new Cottage(190, 10, 2),
-            new Cottage(180, 30, 5),
+            new Flat(190, 10, 2),
+            new Flat(180, 30, 5),
             new Cottage(250, 3)
         ));
 
