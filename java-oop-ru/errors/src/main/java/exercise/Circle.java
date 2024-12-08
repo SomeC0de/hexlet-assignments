@@ -14,12 +14,12 @@ public class Circle {
         return this.radius;
     }
 
-    public long getSquare() throws NegativeRadiusException {
+    public double getSquare() throws NegativeRadiusException {
         if (this.radius < 0) {
             throw new NegativeRadiusException("Не удалось посчитать площадь");
         }
 
-        return Math.round(Math.PI * this.radius * this.radius);
+        return (Math.PI * this.radius * this.radius);
     }
 }
 // END
